@@ -1,10 +1,10 @@
 {
   "main": "./lib/keytar.js",
   "typings": "keytar.d.ts",
-  "name": "keytar",
-  "description": "Bindings to native Mac/Linux/Windows password APIs",
+  "name": "@wbrickner/keytar-sync",
+  "description": "Fork of Keytar that has sync methods.",
   "version": "4.11.0",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "https://github.com/atom/node-keytar.git"
