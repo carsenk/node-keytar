@@ -3,7 +3,7 @@
   "typings": "keytar.d.ts",
   "name": "@wbrickner/keytar-sync",
   "description": "Fork of Keytar that has sync methods.",
-  "version": "4.11.0",
+  "version": "4.11.1",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
