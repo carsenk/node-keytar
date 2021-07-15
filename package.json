@@ -1,11 +1,11 @@
 {
   "main": "./lib/keytar.js",
   "typings": "keytar.d.ts",
-  "name": "keytar-extra",
-  "description": "Bindings to native Mac/Linux/Windows password APIs",
-  "version": "4.12.0",
+  "name": "keytar-sync",
+  "description": "Bindings to native Mac/Linux/Windows password APIs with Sync option",
+  "version": "5.0.0",
   "license": "MIT",
-  "author": "Will Brickner",
+  "author": "Carsen Klock",
   "repository": {
     "type": "git",
     "url": "https://github.com/atom/node-keytar.git"
@@ -31,29 +31,30 @@
   ],
   "types": "./keytar.d.ts",
   "scripts": {
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "prebuild-install || npm run build",
+    "build": "node-gyp rebuild",
     "lint": "npm run cpplint",
     "cpplint": "node-cpplint --filters legal-copyright,build-include,build-namespaces src/*.cc",
     "test": "npm run lint && npm build . && mocha --require babel-core/register spec/",
-    "prebuild-node": "prebuild -t 6.11.0 -t 7.9.0 -t 8.9.0 -t 9.4.0 -t 10.11.0 -t 11.9.0 -t 12.0.0 --strip",
-    "prebuild-node-ia32": "prebuild -t 6.11.0 -t 7.9.0 -t 8.9.0 -t 9.4.0 -a ia32 --strip",
-    "prebuild-electron": "prebuild -t 1.6.11 -t 1.7.10 -t 1.8.0 -t 2.0.0 -t 3.0.0 -t 4.0.4 -t 5.0.0 -r electron --strip",
-    "prebuild-electron-ia32": "prebuild -t 1.6.11 -t 1.7.10 -t 1.8.0 -t 2.0.0 -t 3.0.0 -t 4.0.4 -t 5.0.0 -r electron -a ia32 --strip",
+    "prebuild-node": "prebuild -t 8.9.0 -t 9.4.0 -t 10.11.0 -t 11.9.0 -t 12.0.0 -t 13.0.0 -t 14.0.0 --strip",
+    "prebuild-node-ia32": "prebuild -t 8.9.0 -t 9.4.0 -a ia32 --strip",
+    "prebuild-electron": "prebuild -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -t 9.0.0-beta.16 -r electron --strip",
+    "prebuild-electron-ia32": "prebuild -t 5.0.0 -t 6.0.0 -t 7.0.0 -t 8.0.0 -t 9.0.0-beta.16 -r electron -a ia32 --strip",
     "upload": "node ./script/upload.js",
     "postpublish": "git push --follow-tags"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4",
-    "node-abi": "^2.8.0",
+    "chai": "^4.3.4",
+    "mocha": "^7.1.2",
+    "node-abi": "^2.19.3",
     "node-cpplint": "~0.4.0",
-    "node-gyp": "^5.0.0",
-    "prebuild": "^9.0.0"
+    "node-gyp": "^7.0.0",
+    "prebuild": "^10.0.1"
   },
   "dependencies": {
-    "nan": "2.14.0",
-    "prebuild-install": "5.3.0"
+    "nan": "2.14.2",
+    "prebuild-install": "^6.0.0"
   }
 }

@@ -1,15 +1,15 @@
 # Keytar - Node module to manage system keychain
 
-[![Travis Build Status](https://travis-ci.org/atom/node-keytar.svg?branch=master)](https://travis-ci.org/atom/node-keytar)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/atom/node-keytar?svg=true)](https://ci.appveyor.com/project/Atom/node-keytar)
-[![Dependency Status](https://david-dm.org/atom/node-keytar.svg)](https://david-dm.org/atom/node-keytar)
+[![Travis Build Status](https://travis-ci.org/atom/node-keytar.svg?branch=master)](https://travis-ci.org/carsenk/node-keytar)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/atom/node-keytar?svg=true)](https://ci.appveyor.com/project/carsenk/node-keytar)
+[![Dependency Status](https://david-dm.org/carsenk/node-keytar.svg)](https://david-dm.org/carsenk/node-keytar)
 
 A native Node module to get, add, replace, and delete passwords in system's keychain. On macOS the passwords are managed by the Keychain, on Linux they are managed by the Secret Service API/libsecret, and on Windows they are managed by Credential Vault.
 
 ## Installing
 
 ```sh
-npm install keytar-extra
+npm install keytar-sync
 ```
 
 ### On Linux
@@ -31,7 +31,7 @@ Depending on your distribution, you will need to run the following command:
 ## Docs
 
 ```javascript
-const keytar = require('keytar-extra')
+const keytar = require('keytar-sync')
 ```
 
 ### Differences in Behavior
