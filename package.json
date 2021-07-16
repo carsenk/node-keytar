@@ -3,7 +3,7 @@
   "typings": "keytar.d.ts",
   "name": "keytar-sync",
   "description": "Bindings to native Mac/Linux/Windows password APIs with Sync option",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "license": "MIT",
   "author": "Carsen Klock",
   "repository": {
